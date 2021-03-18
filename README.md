@@ -2,11 +2,11 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![Cloud security](Images/diagram_filename.png)
+[Cloud security](Images/diagram_filename.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._ playbookelk.yml
+  Enter the playbook file._ playbookelk.yml
 
 This document contains the following details:
 - Description of the Topologu
@@ -90,9 +90,8 @@ SSH into the control node and follow the steps below:
 - Update the _____ file to include...
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+- _Which file is the playbook? Where do you copy it? Attached to this Readme is a copy of the ansible playbook. This should be copied into a file on your ansible docker to the following location /etc/ansible/<file>
+- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on? The file which needs to be updated inside the ansible container is the hosts file. This must be updated (as seen at the beginning of this document) to reflect which private network IP addresses are allowed to host the ansible playbook.
+It is important to ssh into any machine of which the playbook is designed to run. Then copy the file and run it on that machine. ELK and Filebeat are designed to work together. For instance, the Filebeat program is designed to take logs and output them into Kibana via the ELK vm. Which means that the Filebeat should be installed on the web-machines where files are being monitored. A mirrored connection needs to be establisted through Azure so that no ssh connection is required from Web-machines to the ELK stack. This protects the ELK machine from attack. 
 - _Which URL do you navigate to in order to check that the ELK server is running?
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
