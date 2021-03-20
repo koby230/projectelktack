@@ -36,7 +36,7 @@ The configuration details of each machine may be found below.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
+| Jump Box | Gateway  | 10.0.0.4   | Linux            |
 | Web 1    | Gateway  | 10.0.0.5   | Linux            |
 | Web 2    | Gateway  | 10.0.0.6   | Linux            |
 | Web 3    | Gateway  | 10.0.0.7   | Linux            |
@@ -56,7 +56,7 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 | 10.0.0.1             |
+| Jump Box | Yes                 | 10.0.0.4             |
 |  Web 1   | no                  | 10.0.0.5             |
 |  Web 2   | no                  | 10.0.0.6             |
 |  Web 3   | no                  | 10.0.0.7             |
@@ -75,7 +75,7 @@ The playbook implements the following tasks:
 -The “hosts” file must be updated to reflect the name of the network and the IP addresses which are allowed to access the ELK stack:
 
 >[webservers] 
->10.0.0.1 ansible_python_interpreter=/usr/bin/python3 
+>10.0.0.4 ansible_python_interpreter=/usr/bin/python3 
 >10.0.0.5 ansible_python_interpreter=/usr/bin/python3 
 >10.0.0.6 ansible_python_interpreter=/usr/bin/python3
 >[elk] 
