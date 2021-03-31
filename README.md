@@ -68,7 +68,6 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 What is the main advantage of automating configuration with Ansible? Advantage of using Ansible for Network Automation is the use of roles, When you write alot of playbooks often they tend to duplicate. 
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 - ... Install Docker
 - ... Ssh into containers
 ... Port 80 to localhost:5601
@@ -91,8 +90,6 @@ The following screenshot displays the result of running `docker ps` after succes
 This ELK server is configured to monitor the following machines:
 - Web1-10.0.0.5, Web2-10.0.0.6, Web3-10.0.0.7
 
-We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
 
 These Beats allow us to collect the following information from each machine:
 -Filebeat is a collection of data on log events. This information is sent through Logstash which outputs to Kibana and gives the ability to read what is happening within our network.
